@@ -299,6 +299,19 @@
 ```bash
    run scaner.provider.traversal -a "package-name"
 ```
+**Exported Broadcast Receivers**
+- [ ] Verify any exported broadcast receivers and exploit it
+```bash
+  run app.broadcast.info -a "package-name"
+  # List the exported brodcast receivers
+  
+  run app.broadcast.send --component "package-name" "component-name" --extra <type> <key> <value>
+  # Send data through exported broadcast receivers
+  
+  run app.broadcast.sniff --action <action>
+  # Sniff the data through exported broadcast receivers
+```
+
 ## Intercepting HTTPS request on Java Based Application
 **With Frida**
 - [ ] Download and install frida
