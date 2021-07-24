@@ -303,7 +303,7 @@
 - [ ] Verify any exported broadcast receivers and exploit it
 ```bash
   run app.broadcast.info -a "package-name"
-  # List the exported brodcast receivers
+  # List the exported broadcast receivers
   
   run app.broadcast.send --component "package-name" "component-name" --extra <type> <key> <value>
   # Send data through exported broadcast receivers
