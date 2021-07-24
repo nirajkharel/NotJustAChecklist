@@ -311,6 +311,18 @@
   run app.broadcast.sniff --action <action>
   # Sniff the data through exported broadcast receivers
 ```
+**Exported Services**
+- [ ] Verify any exported services and exploit it
+```bash
+  run app.service info -a "package-name"
+  # List the exported services
+  
+  run app.service.start --action <action> --component <package-name> <component-name>
+  # Start the exported services
+  
+  run app.service.send <package-name> <component-name> -msg <what> <arg1> <arg2> --extra <type> <key> <value> --bundle-as-obj
+  # Send data through services
+```
 
 ## Intercepting HTTPS request on Java Based Application
 **With Frida**
