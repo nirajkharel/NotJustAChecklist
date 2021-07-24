@@ -433,3 +433,7 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
   
 ## Testing APIs
 - [ ] Please follow [this](https://github.com/nirajkharel/NotJustAChecklist/blob/main/API.md) for API Pentesting Checklist
+
+## References
+- [OWASP MSTG](https://github.com/OWASP/owasp-mstg)
+- [Hacktrick Android Application Penetration](https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting)
