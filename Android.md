@@ -18,7 +18,9 @@
 **12. [Exploiting Exported Components with drozer](#exploiting-exported-components-with-drozer)**  
 **13. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
 **14. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
-**15. [Testing APIs](#testing-apis)**
+**15. [Testing APIs](#testing-apis)**   
+**16. [References](#references)**   
+**17. [More Resources](#more-resources)**   
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
