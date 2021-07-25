@@ -92,7 +92,7 @@ API Security Top 10 2019
     monitoring
 
 ### Checklist 
-
+***Note: This checklist is referenced from [31 Days of API Security Tips](https://github.com/inonshk/31-days-of-API-Security-Tips)***
 -   **BFLA (Broken Function Level Authorization)**
 
     Leverage the predictable nature of REST to find admin API endpoints!
