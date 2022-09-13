@@ -83,7 +83,28 @@
 - [ ] Hardcode encryption keys and secrets
 - [ ] Hardcoded data on settings.json ➡️ `/Payload/Appname.app/settings.json`
 
+## Analysis with Objection
+**Grab the package name**
+- `frida-ps -Uai | grep appname`
+**Start objection**
+- `objection -g package-name explore`
+  
+**Inspect Binary Info**
+- Dump info on the iOS binary. This will allow you to confirm if the app is encrypted and compiled as a Position Independent Executable (PIE).
+- `ios info binary`
 
+**Dump the keychain**
+- `ios keychain dump`
+- `ios keychain dump_raw`
+
+**Check for other data stores for sensitive informationn**
+- `ios nsurlcredentialstorage dump`
+- `ios nsuserdefaults get`
+- `ios cookies get`
+**Upload and Download the files**
+- `file download <remote path> [<local path>]`
+- `file upload <local path> [<remote path>]`
+  
 ## Digging into FileSystem in IOS
 - IOS applications have two main directories `Bundle` and `Data`
 - **Bundle Directory**
