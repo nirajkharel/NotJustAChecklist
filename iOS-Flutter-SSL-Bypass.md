@@ -54,7 +54,7 @@
 - Little bit of reverse engineering.
 	- Install Ghidra and Open the file Flutter from the bundle.
 	- Click on Search -> scalars -> Enter 0x186 on the filter.
-	- More info (here)[https://blog.nviso.eu/2020/06/12/intercepting-flutter-traffic-on-ios/]
+	- More info [here](https://blog.nviso.eu/2020/06/12/intercepting-flutter-traffic-on-ios/)
 	- If we do not find the 0x186 on Scalar, this method might not work on bypassing SSL pinning.
 
 - Alternative method (Works most of the time)
