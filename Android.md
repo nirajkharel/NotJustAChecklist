@@ -314,7 +314,7 @@
 **Exported Services**
 - [ ] Verify any exported services and exploit it
 ```bash
-  run app.service info -a "package-name"
+  run app.service.info -a "package-name"
   # List the exported services
   
   run app.service.start --action <action> --component <package-name> <component-name>
