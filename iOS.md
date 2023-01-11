@@ -48,6 +48,7 @@
   - [ ] Download a python file which is built using frida to dump the IPA from [here](https://github.com/AloneMonkey/frida-ios-dump).
   - [ ] Install the requirements
   - [ ] Forward SSH port with Iproxy `iproxy 2222 22`
+  *** OR *** `ssh root@<Device IP> -L 2222:localhost:22`
   - [ ] Run `python3 dump.py "Display Name"`
   - [ ] If the script does not start dumping itself. Open the app and keep the script running on background.
 
