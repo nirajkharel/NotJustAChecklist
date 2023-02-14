@@ -68,6 +68,8 @@
   - Assets.car - A compressed folder which contains resources. (Example: icons, images)
     - Download the extractor from https://github.com/bartoszj/acextract
     - `acextract -i Assets.car -l`
+    - `mkdir -p ~/AssetsOutput`
+    - `acextract -i ~/Assets.car -o ~/AssetsOutput`
   - Appname - A binary executable file which contains actual source code.
 
 ## Check for Hardcoded and URL endpoints
