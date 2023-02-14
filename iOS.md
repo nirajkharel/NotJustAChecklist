@@ -52,6 +52,11 @@
   - [ ] Run `python3 dump.py "Display Name"`
   - [ ] If the script does not start dumping itself. Open the app and keep the script running on background.
 
+## Deeplink
+  - Search for the deeplink schemas on the plist file.
+  - If available
+    - Execute the deeplink with `xcrun simctl openurl booted "deeplink://videos/new"`
+  
 ## Decompile the IPA file
 - [ ] Decompile using unzip. The decompiled directory will be named as `Payload`
   - `unzip appname.ipa`
