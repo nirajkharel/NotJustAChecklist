@@ -54,6 +54,7 @@
 
 ## Deeplink
   - Search for the deeplink schemas on the plist file.
+  - Check for CFBundleURLTypes, CFBundleURLSchemes, CFBundleURLName on the plist file.
   - If available
     - Execute the deeplink with `xcrun simctl openurl booted "deeplink://videos/new"`
   
