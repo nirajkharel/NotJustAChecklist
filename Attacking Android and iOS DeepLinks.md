@@ -2,7 +2,7 @@ One of the most frequently acknowledged vulnerabilities in bug bounty programs f
 
 **What is a deeplink?**
 
-A deep link in mobile application is like a special link that takes you directly to a specific part of a mobile app instead of a website. This means you can easily switch between apps or go from a website to an app without having to click a lot of buttons. It makes it quicker and easier to find what you're looking for in the app 
+A deep link in mobile application is like a special link that takes you directly to a specific part of a mobile app instead of a website. This means you can easily switch between apps or go from a website to an app without having to click a lot of buttons. It makes it quicker and easier to find what you're looking for in the app. 
 
 ## Android
 Android usually have three type of deeplinks:
