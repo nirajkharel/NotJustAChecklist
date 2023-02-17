@@ -10,5 +10,10 @@ Android usually have three type of deeplinks:
 - App Links 
 - Intent URLs 
 
+**Scheme URLs**
+
+**App Links**
+
+**Intent URLs**
 
 ## iOS
