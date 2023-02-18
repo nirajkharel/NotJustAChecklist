@@ -27,10 +27,12 @@ Watch these videos to understand more about Implicit and Explicit Deeplinks
   ```
   ![image](https://user-images.githubusercontent.com/47778874/219850400-96732f54-3726-457e-a4bf-92c2e9a3bc44.png)
 
-Here wew can see that the `host` and `schemas` for the DeepLink is defined in AndroidManifest.xml file. We can reconstruct the DeepLink URL from this. Usually application has four different components in an application with two optionals. HOST, SCHEMAS, PATH AND PARAMETERS.
-```bash
-com.insecureshop://insecureshop/
-```
+Here wew can see that the `host` and `schemas` for the DeepLink is defined in AndroidManifest.xml file. We can reconstruct the DeepLink URL from this. Usually application has four different components in an application with two optionals. `HOST`, `SCHEMAS` where `PATH` and `PARAMETERS` are optional.
+  ```bash
+  com.insecureshop://insecureshop/
+  # Or, with PATH and PARAMETERS, a deeplink would look like
+  com.insecureshop://insecureshop/profile?id=
+  ```
 
 - **App Links** 
 - **Intent URLs** 
