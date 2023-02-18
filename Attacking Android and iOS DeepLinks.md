@@ -12,6 +12,10 @@ A deep link in mobile application is like a special link that takes you directly
 - Implicit DeepLinks
   - Implicit deep linking is a technique that enables users to access a specific location within a mobile application. This location is predetermined and remains fixed, meaning that the content displayed within the application will remain the same every time the user accesses it via the implicit deep link. For example, if a user watches a YouTube video on their Chrome browser and then opens it in the YouTube application using an implicit deep link, the content of the video will not change.
 
+Watch these videos to understand more about Implicit and Explicit Deeplinks
+  - https://www.youtube.com/watch?v=pY9FOqk_pe4
+  - https://www.youtube.com/watch?v=XJgPIeolJu8
+  
 **And those DeepLinks can be used using three different ways:**
 - Scheme URLs 
 - App Links 
