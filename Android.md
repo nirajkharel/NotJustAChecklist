@@ -67,6 +67,7 @@
 - [ ] Check the Implicit and Explicit Intents
 - [ ] Note down the interesting activites on the manifest file
 - [ ] Check if HTTP is enabled ➡️ `cleartextTrafficPermitted="true"`
+- [ ] Checked for exported components `apkanalyzer manifest print appname.apk`
 
 ## Network 
 - [ ] Check the Network Security config file ➡️ `/res/xml/network_security_config.xml`
