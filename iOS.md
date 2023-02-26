@@ -187,4 +187,4 @@
 - [Understanding IOS FileSystems](https://medium.com/@lucideus/understanding-the-ios-file-system-eee3dc87e455)
 - [IOS Pentesting - Cobalt](https://cobalt.io/blog/ios-pentesting-101)
 - [iOS Static Analysis By Trelis Blog](https://trelis24.github.io/2018/03/27/Pentesting-iOS-Static/)
-- [iOS Logs] (https://bsddaemonorg.wordpress.com/2021/04/12/analysing-ios-apps-log-output/)
+- [iOS Logs](https://bsddaemonorg.wordpress.com/2021/04/12/analysing-ios-apps-log-output/)
