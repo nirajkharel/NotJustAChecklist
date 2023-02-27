@@ -16,13 +16,14 @@
 **10. [Exploiting backup](#exploiting-backup)**   
 **11. [Exploiting Android Debuggable](#exploiting-android-debuggable)**   
 **12. [Exploiting Exported Components with drozer](#exploiting-exported-components-with-drozer)**  
-**13. [DeepLink URIs](#deeplink-uris)**   
-**14. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
-**15. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
-**16. [Intercepting HTTPS request on Webview Based Application](#Intercepting-https-request-on-webview-based-application)**   
-**17. [Testing APIs](#testing-apis)**   
-**18. [References](#references)**   
-**19. [More Resources](#more-resources)**   
+**13. [Exported Components with APKAnalyzer](#exported-components-with-apkanalyzer)**   
+**14. [DeepLink URIs](#deeplink-uris)**   
+**15. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
+**16. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
+**17. [Intercepting HTTPS request on Webview Based Application](#Intercepting-https-request-on-webview-based-application)**   
+**18. [Testing APIs](#testing-apis)**   
+**19. [References](#references)**   
+**20. [More Resources](#more-resources)**   
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -326,6 +327,17 @@
   run app.service.send <package-name> <component-name> -msg <what> <arg1> <arg2> --extra <type> <key> <value> --bundle-as-obj
   # Send data through services
 ```
+## Exported Components with APKAnalyzer
+- [ ] Drozer might not work on every device, we can use apkanalyzer for exported components in such case.
+- [ ] Exported Activities `apkanalyzer manifest print app-name.apk | grep -i activity`
+   - [ ] Start an activity `adb shell am start -n com.example.demo/com.example.test.MainActivity`
+- [ ] Exported Services `apkanalyzer manifest print app-name.apk | grep -i service`
+   - [ ] Start the services `adb shell am startservice com.some.package.name/.YourServiceSubClassName`
+- [ ] Exported Content Providers `apkanalyzer manifest print app-name.apk | grep -i provider`
+   - [ ] Query the content providers `adb shell content query --uri content://com.myapp.authority/path --where column=x --arg 1 --sort column_name DESC`
+   - [ ] More on [Stack Overflow](https://stackoverflow.com/questions/27988069/query-android-content-provider-from-command-line-adb-shell)
+- [ ] Exported Broadcast Receivers `apkanalyzer manifest print app-name.apk | grep -i broadcast`
+  - [ ] Start broadcast`adb shell am broadcast -a <Action-Name> -n <package-nname/.BroadcastReceiver> --es <parameter> <value>`
 
 ## DeepLink URIs
 - [ ] Download the below script.
