@@ -10,13 +10,14 @@
 **4. [Extracting the IPA File](#extracting-the-ipa-file)**  
 **5. [Decompile the IPA file](#decompile-the-ipa-file)**  
 **6. [Check for Hardcoded and URL endpoints](#check-for-hardcoded-and-url-endpoints)**    
-**7. [Digging into FileSystem in IOS](#digging-into-filesystem-in-ios)**  
-**8. [Intercepting HTTP Traffic on IOS](#intercepting-http-traffic-on-ios)**  
-**9. [Analyze the source code thoroughly specially on](#analyze-the-source-code-thoroughly-specially-on)**   
-**10. [Cryptography](#cryptography)**     
-**11. [Testing APIs](#testing-apis)**   
-**12. [References](#references)**   
-**13. [More Resources](#more-resources)**   
+**7. [Digging into FileSystem in IOS](#digging-into-filesystem-in-ios)**
+**8. [Logging](#)
+**9. [Intercepting HTTP Traffic on IOS](#intercepting-http-traffic-on-ios)**  
+**10. [Analyze the source code thoroughly specially on](#analyze-the-source-code-thoroughly-specially-on)**   
+**11. [Cryptography](#cryptography)**     
+**12. [Testing APIs](#testing-apis)**   
+**13. [References](#references)**   
+**14. [More Resources](#more-resources)**   
 
 ## Setup 
 ### Jailbreak the ios device.
@@ -146,7 +147,13 @@
     - Contains files and directories like plist files, caches, preferences.
     - [ ] Navigate to this directory. Example: `cd /var/mobile/Containers/Data/Application/8C8E7EB0-BC9B-435B-8EF8-8F5560EB0693/Library`
     - [ ] Check for preferences directory inside Library too since it can contain the sensitive informations like username, passwords, PII and much more.
-
+  
+## Logging
+  - [ ] Check if the application logs sensitive informations. i.e. NSLog
+  - [ ] Install the Log Viewer from https://formulae.brew.sh/formula/libimobiledevice
+  - [ ] `idevicesyslog --process <PackageName or App Name>`
+  - [ ] Or, use this [Frida Script](https://github.com/interference-security/frida-scripts/blob/master/iOS/intercept-nslog.js) to view the logs.
+  
 ## Intercepting HTTP Traffic on IOS
 - [ ] The IOS device and interceptor should be on the same LAN.
 - [ ] Navigate to Proxy tab and Add a new listener. The IP address should be of your computer and port can be any. Example: 5567
