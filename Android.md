@@ -459,6 +459,31 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
 
 - [ ] Save the configuration, and you will be able to intercept the traffic of the flutter application
   
+## Intercepting HTTPS request on Webview Based Application
+- [ ] Grab the package name. `frida-ps -Uai | grep -ia 'app-name'`
+- [ ] Save the below JS code. fridawebview.js
+     ```JS
+        Java.perform(function() {
+          var array_list = Java.use("java.util.ArrayList");
+          var ApiClient = Java.use('com.android.org.conscrypt.TrustManagerImpl');
+          // Cert pin bypass by https://techblog.mediaservice.net/2018/11/universal-android-ssl-pinning-bypass-2/
+          ApiClient.checkTrustedRecursive.implementation = function(a1,a2,a3,a4,a5,a6) {
+            console.log('Bypassing SSL Pinning');
+            var k = array_list.$new(); 
+            return k;
+          }
+
+          var WebView = Java.use('android.webkit.WebView');
+          WebView.loadUrl.overload("java.lang.String").implementation = function (s) {
+            console.log('Enable webview debug for URL: '+s.toString());
+            this.setWebContentsDebuggingEnabled(true);
+            this.loadUrl.overload("java.lang.String").call(this, s);
+          };
+        },0);
+     ```
+- [ ] Proxy the request from Android device to your PC.
+- [ ] Run the command `frida -U -l fridawebview.js -f com.packagename`
+
 ## Testing APIs
 - [ ] Please follow [this](https://github.com/nirajkharel/NotJustAChecklist/blob/main/API.md) for API Pentesting Checklist
 
