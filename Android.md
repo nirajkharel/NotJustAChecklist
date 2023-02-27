@@ -16,12 +16,13 @@
 **10. [Exploiting backup](#exploiting-backup)**   
 **11. [Exploiting Android Debuggable](#exploiting-android-debuggable)**   
 **12. [Exploiting Exported Components with drozer](#exploiting-exported-components-with-drozer)**  
-**13. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
-**14. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
-**15. [Intercepting HTTPS request on Webview Based Application](#Intercepting-https-request-on-webview-based-application)**   
-**16. [Testing APIs](#testing-apis)**   
-**17. [References](#references)**   
-**18. [More Resources](#more-resources)**   
+**13. [DeepLink URIs](#deeplink-uris)**
+**14. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
+**15. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
+**16. [Intercepting HTTPS request on Webview Based Application](#Intercepting-https-request-on-webview-based-application)**   
+**17. [Testing APIs](#testing-apis)**   
+**18. [References](#references)**   
+**19. [More Resources](#more-resources)**   
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -325,6 +326,18 @@
   run app.service.send <package-name> <component-name> -msg <what> <arg1> <arg2> --extra <type> <key> <value> --bundle-as-obj
   # Send data through services
 ```
+
+## DeepLink URIs
+- [ ] Download the below script.
+- [ ] Decompile the application.
+- [ ] Execute below commands
+    ```bash
+    git clone https://github.com/teknogeek/get_schemas 
+    pip3 install -r requirements.txt
+    python3 get_schemas.py -m ./com.twitter.android/AndroidManifest.xml -s ./com.twitter.android/res/values/strings.xml
+    ```
+- [ ] Execute the deeplink `adb shell am start -W -a android.intent.action.VIEW -d "example://gizmos" com.example.android`
+- [ ] For manual enumeration and exploitation, check out another notes of mine [here.](https://github.com/nirajkharel/NotJustAChecklist/blob/main/Attacking%20DeepLinks.md)
 
 ## Intercepting HTTPS request on Java Based Application
 **With Frida**
