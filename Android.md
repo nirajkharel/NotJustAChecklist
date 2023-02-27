@@ -462,7 +462,7 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
   
 ## Intercepting HTTPS request on Webview Based Application
 - [ ] Grab the package name. `frida-ps -Uai | grep -ia 'app-name'`
-- [ ] Save the below JS code. fridawebview.js
+- [ ] Save the below JS code. [fridawebview.js](https://gist.github.com/1mm0rt41PC/cd492f24dc061019fb25222ba0b96d20)
      ```JS
         Java.perform(function() {
           var array_list = Java.use("java.util.ArrayList");
@@ -491,6 +491,7 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
 ## References
 - [OWASP MSTG](https://github.com/OWASP/owasp-mstg)
 - [Hacktrick Android Application Penetration](https://book.hacktricks.xyz/mobile-apps-pentesting/android-app-pentesting)
+- https://gist.github.com/incogbyte/1e0e2f38b5602e72b1380f21ba04b15e
 
 ## More Resources
 - [Exploiting Android deep links and exported components by b3nac](https://www.youtube.com/watch?v=lg1sN8njSYs&t=1344s)
