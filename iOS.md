@@ -10,8 +10,8 @@
 **4. [Extracting the IPA File](#extracting-the-ipa-file)**  
 **5. [Decompile the IPA file](#decompile-the-ipa-file)**  
 **6. [Check for Hardcoded and URL endpoints](#check-for-hardcoded-and-url-endpoints)**    
-**7. [Digging into FileSystem in IOS](#digging-into-filesystem-in-ios)**
-**8. [Logging](#)
+**7. [Digging into FileSystem in IOS](#digging-into-filesystem-in-ios)**    
+**8. [Logging](#)**   
 **9. [Intercepting HTTP Traffic on IOS](#intercepting-http-traffic-on-ios)**  
 **10. [Analyze the source code thoroughly specially on](#analyze-the-source-code-thoroughly-specially-on)**   
 **11. [Cryptography](#cryptography)**     
