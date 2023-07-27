@@ -20,10 +20,12 @@
 **14. [DeepLink URIs](#deeplink-uris)**   
 **15. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
 **16. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
-**17. [Intercepting HTTPS request on Webview Based Application](#Intercepting-https-request-on-webview-based-application)**   
+**17. [Intercepting HTTPS request on Webview Based Application](#intercepting-https-request-on-webview-based-application)**   
 **18. [Testing APIs](#testing-apis)**   
 **19. [References](#references)**   
 **20. [More Resources](#more-resources)**   
+**21. [Static Analysis Toolkit](#static-analysis-toolkit)**  
+**22. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -520,3 +522,15 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
 
 ## More Resources
 - [Exploiting Android deep links and exported components by b3nac](https://www.youtube.com/watch?v=lg1sN8njSYs&t=1344s)
+
+## Static Analysis Toolkit
+- [Qark](https://github.com/linkedin/qark/)
+- [AndroBugs](https://github.com/AndroBugs/AndroBugs_Framework)
+- [Nuclei](https://github.com/projectdiscovery/nuclei)
+
+## Dynamic Analysis Toolkit
+- [Frida](https://github.com/frida)
+- [Objection](https://github.com/sensepost/objection)
+- [Runtime Mobile Security](https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security)
+- [House](https://github.com/nccgroup/house)
+- [Mobsf](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
