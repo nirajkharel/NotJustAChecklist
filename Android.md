@@ -178,7 +178,7 @@
     ```xml
     android:extractNativeLibs="false"
     ```
-- [ ] Or, you can, you need to perform zipalign as per below commands.
+- [ ] Or, you might need to perform zipalign as per below commands.
       
     ```bash
     zipalign -p -f -v 4 out.apk out-aligned.apk
