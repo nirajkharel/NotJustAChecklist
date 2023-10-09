@@ -173,6 +173,19 @@
   - `zipalign -v 4 <YOUR_APP_NAME> app-release-final.apk`
 - [ ] Automate the signing and zipalign with [uber-apk-signer](https://github.com/patrickfav/uber-apk-signer/releases/tag/v1.2.1)
   - `java -jar uber-apk-signer-1.2.1.jar -a out.apk`
+- [ ] If you faced **adb: failed to install out-aligned-debugSigned.apk: Failure [INSTALL_FAILED_INVALID_APK: Failed to extract native libraries, res=-2]** during the installation. Remove the below code snippet from the **AndroidManifest.xml** file and try again.
+
+    ```xml
+    android:extractNativeLibs="false"
+    ```
+- [ ] Or, you can, you need to perform zipalign as per below commands.
+      
+    ```bash
+    zipalign -p -f -v 4 out.apk out-aligned.apk
+    ```
+- [ ] Note:
+  - [ ] Run zipalign **before** signing the apk file if you are using **apksigner**
+  - [ ] Run zipalign **after** signing the apk file if you are using **jarsigner**.
 
 ## Cryptography
 - [ ] Check if application is communicating with server encrypted or unencrypted
