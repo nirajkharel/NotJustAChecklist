@@ -187,6 +187,18 @@
   - [ ] Run zipalign **before** signing the apk file if you are using **apksigner**
   - [ ] Run zipalign **after** signing the apk file if you are using **jarsigner**.
 
+- [ ] If you got AAB file from the client: [BundleTools](https://github.com/google/bundletool/releases)
+  ```bash
+  # Generate the certificate
+  keytool -genkey -v -keystore keys/test.keystore -alias Test -keyalg RSA -keysize 1024 -sigalg SHA1withRSA -validity 10000
+
+  # Convert AAB into the different APKs compatible for different architecture.
+  java -jar bundletool-all-1.15.6.jar build-apks --bundle=app.aab --output=app.apks --ks=keys/test.keystore --ks-key-alias=Test --ks-pass=pass:<password-used-for-above-command>
+
+  # Install the compatible APK automatically
+  java -jar bundletool-all-1.15.6.jar install-apks --apks=app.apks
+  ```
+
 ## Cryptography
 - [ ] Check if application is communicating with server encrypted or unencrypted
 - [ ] Check if the private key secrets are being stored hardcode on the source code
