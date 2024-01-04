@@ -537,6 +537,27 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
 - [ ] Proxy the request from Android device to your PC.
 - [ ] Run the command `frida -U -l fridawebview.js -f com.packagename`
 
+## MobSF and Drozer on Docker
+#### MobSF
+- Download: `docker pull opensecurity/mobile-security-framework-mobsf:latest`
+- Run: `docker run -it --rm -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest`
+- Stop: `docker ps` and then `docker stop container-id`
+
+#### Drozer
+- Download: `docker pull withsecurelabs/drozer`
+- Connect to the phone via USB
+- Open the apk file
+- Port Forward: `adb forward tcp:31415 tcp:31415`
+- Execute drozer: `docker run --add-host host.docker.internal:host-gateway -it withsecurelabs/drozer console connect --server host.docker.internal`
+- If a system shell is required
+```bash
+adb forward tcp:31415 tcp:31415
+docker run --add-host host.docker.internal:host-gateway -it --entrypoint sh withsecurelabs/drozer
+drozer console connect --server host.docker.internal
+```
+- Stop the container: `docker ps` and then `docker stop container-id`
+- Docker URL for drozer: https://hub.docker.com/r/withsecurelabs/drozer
+
 ## Testing APIs
 - [ ] Please follow [this](https://github.com/nirajkharel/NotJustAChecklist/blob/main/API.md) for API Pentesting Checklist
 
