@@ -442,6 +442,22 @@ pip3 install frida-tools
 ```
 - [ ] Burp will start intercepting the packets
 
+- [ ] **If you are testing the application on latest Android versions like 11, you will get error while running SSL pinning bypass script with frida.**
+- [ ] There are two solutions for this.
+- [ ] One is to downgrade the frida version to `pip3 install frida==16.1.8`.
+- [ ] And then disable the USAP.
+```bash
+adb shell
+su
+mount -o remount,rw '/'
+chmod 777 /
+setenforce 0
+setprop persist.device_config.runtime_native.usap_pool_enabled false
+settings put system screen_off_timeout 100000000
+exit
+exit
+```
+  
 ## Intercepting HTTPS request on Flutter Based Application
 The use of Frida on bypassing SSL Pinning may not work on flutter. I also performed some exploitatio in libflutter.so file for injecting the memory address of the certificate checker. However it did not work as intended.
 [Here](https://blog.nviso.eu/2019/08/13/intercepting-traffic-from-android-flutter-applications/) is the reference for bypassing SSL Pinning on flutter application through the exploitation of libflutter.so file.
