@@ -461,7 +461,7 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
   - (Optional) Open the Play Store and configure you account.
   - Verify ARM Translation tools installtion
   ```bash
-     adb shell getprob ro.product.cpu.abilist
+     adb shell getprop ro.product.cpu.abilist
      # This command should return "x86,armeabi-v7a,armeabi" as the output.
   ```
 - [ ] Download the Burp Certificate
