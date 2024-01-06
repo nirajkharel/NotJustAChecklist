@@ -20,13 +20,14 @@
 **14. [DeepLink URIs](#deeplink-uris)**   
 **15. [Intercepting HTTPS request on Java Based Application](#intercepting-https-request-on-java-based-application)**  
 **16. [Intercepting HTTPS request on Flutter Based Application](#intercepting-https-request-on-flutter-based-application)**   
-**17. [Intercepting HTTPS request on Webview Based Application](#intercepting-https-request-on-webview-based-application)**   
-**18. [MobSF and Drozer on Docker](#mobsf-and-drozer-on-docker)**  
-**19. [Testing APIs](#testing-apis)**   
-**20. [References](#references)**   
-**21. [More Resources](#more-resources)**   
-**22. [Static Analysis Toolkit](#static-analysis-toolkit)**  
-**23. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**
+**17. [Intercepting HTTPS request on Webview Based Application](#intercepting-https-request-on-webview-based-application)**  
+**18. [SSL Pinning Bypass as a whole](#ssl-pinning-bypass-as-a-whole)**  
+**19. [MobSF and Drozer on Docker](#mobsf-and-drozer-on-docker)**  
+**20. [Testing APIs](#testing-apis)**   
+**21. [References](#references)**   
+**22. [More Resources](#more-resources)**   
+**23. [Static Analysis Toolkit](#static-analysis-toolkit)**  
+**24. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -553,6 +554,11 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
      ```
 - [ ] Proxy the request from Android device to your PC.
 - [ ] Run the command `frida -U -l fridawebview.js -f com.packagename`
+
+## SSL Pinning Bypass as a whole
+```bash
+frida -U --codeshare akabe1/frida-multiple-unpinning -f package-name
+```
 
 ## MobSF and Drozer on Docker
 #### MobSF
