@@ -571,7 +571,10 @@ frida -U --codeshare akabe1/frida-multiple-unpinning -f package-name
 - Connect to the phone via USB
 - Open the apk file
 - Port Forward: `adb forward tcp:31415 tcp:31415`
-- Execute drozer: `docker run --add-host host.docker.internal:host-gateway -it withsecurelabs/drozer console connect --server host.docker.internal`
+- Execute drozer
+```bash
+docker run --add-host host.docker.internal:host-gateway -it withsecurelabs/drozer console connect --server host.docker.internal
+```
 - If a system shell is required
 ```bash
 adb forward tcp:31415 tcp:31415
