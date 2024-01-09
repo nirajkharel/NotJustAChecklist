@@ -27,7 +27,8 @@
 **21. [References](#references)**   
 **22. [More Resources](#more-resources)**   
 **23. [Static Analysis Toolkit](#static-analysis-toolkit)**  
-**24. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**
+**24. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**  
+**25. [Decompiling Xamarin Based Applications](#decompiling-xamarin-based-applications)**
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -607,3 +608,14 @@ drozer console connect --server host.docker.internal
 - [House](https://github.com/nccgroup/house)
 - [Mobsf](https://github.com/MobSF/Mobile-Security-Framework-MobSF)
 - [GrapeFruit](https://github.com/chichou/grapefruit)
+
+## Decompiling Xamarin Based Applications
+- Download pyxamstore from https://github.com/jakev/pyxamstore
+  - `git clone https://github.com/jakev/pyxamstore.git`
+- Install
+  - `python3 setup.py install`
+  - `pip3 install xxhash`
+- Decompile the apk with apktoool.
+  - `apktool d yourapp.apk`
+- Unpack the assemblies
+  - `pyxamstore unpack -d yourapp/unknown/assemblies/`
