@@ -619,3 +619,4 @@ drozer console connect --server host.docker.internal
   - `apktool d yourapp.apk`
 - Unpack the assemblies
   - `pyxamstore unpack -d yourapp/unknown/assemblies/`
+- There will be a directory called **out**.
