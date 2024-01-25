@@ -515,6 +515,25 @@ This is an alternative method for bypassing SSL Pinning in Flutter application.
      # Reboot the device (inside adb shell)
      reboot
   ```
+  - Sometime above method also doesnot works and there will be error saying **skipped unmounted partition** . In that case we need to mount with read/write permission. 
+  ```bash
+     adb shell
+     
+     # Enter root
+     su 
+     
+     # Mount with read write permission 
+     mount -o rw,remount -t rootfs/
+     
+     # exit the root
+     exit 
+     
+     # Rebbot the device (inside adb shell)
+     reboot
+     
+     # Push the file 
+     mv /sdcard/Download/4a787b67.0 /system/etc/security/cacerts/
+  ```
   - Verify the certicate installation by navigating to installed certificates on android device through settings. Should list Portswigger CA.
  - [ ] Install and Configure the ProxyDroid aplication on the device
   - Since the flutter application ignores the proxy configured through wifi options, proxydroid must be installed.
