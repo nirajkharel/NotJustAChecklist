@@ -71,7 +71,8 @@
 - [ ] Permission ➡️ Check if application is having permission like External Storage, SMS
 - [ ] Check the exported activites, services, providers and receivers
 - [ ] Intent Filter also makes components exported by default
-- [ ] Task Hijacking ➡️ Check if `launchMode=singleTask`defined
+- [ ] Task Hijacking ➡️ Check if `launchMode=singleTask`defined and `launchMode=singleTop`
+- [ ] Task Hijacking ➡️ Check if `taskAffinity` is present
 - [ ] Check the Implicit and Explicit Intents
 - [ ] Note down the interesting activites on the manifest file
 - [ ] Check if HTTP is enabled ➡️ `cleartextTrafficPermitted="true"`
