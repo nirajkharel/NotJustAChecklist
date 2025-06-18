@@ -28,7 +28,8 @@
 **22. [More Resources](#more-resources)**   
 **23. [Static Analysis Toolkit](#static-analysis-toolkit)**  
 **24. [Dynamic Analysis Toolkit](#dynamic-analysis-toolkit)**  
-**25. [Decompiling Xamarin Based Applications](#decompiling-xamarin-based-applications)**
+**25. [Decompiling Xamarin Based Applications](#decompiling-xamarin-based-applications)**  
+**26. [Bypassing SSL Pinning on Xamarin Based Applications](#bypassing-ssl-pinning-on-xamarin-based-applications)**
 
 ## Setup and Decompile
 - Install the application on emulator or physical device
@@ -640,3 +641,22 @@ drozer console connect --server host.docker.internal
 - Unpack the assemblies
   - `pyxamstore unpack -d yourapp/unknown/assemblies/`
 - There will be a directory called **out**.
+
+## Bypassing SSL Pinning on Xamarin Based Applications
+- As Xamarin seems to be moving away from the .NET HTTP Client in favor of the native client on each platform, universal pinning bypasses designed for the Java HttpClient may now be effective on newer Mono-based apps.
+
+- The main exception is AOT (Ahead-of-Time compiled) apps, which still rely on the .NET HTTP Client. In these cases, it's necessary to identify the relevant native method via reverse engineering and use a custom Frida script to patch it.
+
+- We can find the relevant script for the bypass on [GoSecure repository](https://github.com/GoSecure/frida-xamarin-unpin).
+  ```bash
+  #clone the repo
+  https://github.com/GoSecure/frida-xamarin-unpin
+
+  cd frida-xamarin-unpin
+
+  # Load the application using frida
+  frida -U -f <package-name>
+  %load dist/xamarin-unpin.js
+
+  # Note that proxy to be configured already
+  ```
